@@ -1,14 +1,18 @@
 import "./App.css";
-import useInput from "./useInput/useInput";
+import React from "react";
+import useInputApp from "./UseState/useInput";
+import useTabsApps from "./UseState/useTabs";
 
 const App = () => {
-	const maxLen = (value) => value.length <= 10;
-	const name = useInput("", maxLen);
 	return (
-		<div>
-			<h1>Welcome</h1>
-			<input placeholder="name" {...name} />
-		</div>
+		<>
+			<div>
+				use useInput : <useInputApp />
+			</div>
+			<div>
+				use useTabs : <useTabsApp />
+			</div>
+		</>
 	);
 };
 

@@ -17,5 +17,15 @@ const useInput = (initialValue, validator) => {
 	};
 	return { value, onChange };
 };
+const useInputApp = () => {
+	const maxLen = (value) => value.length <= 10;
+	const name = useInput("", maxLen);
+	return (
+		<div>
+			<h1>Welcome</h1>
+			<input placeholder="name" {...name} />
+		</div>
+	);
+};
 
-export default useInput;
+export default useInputApp;
