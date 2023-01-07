@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const useNetwork = (onChange) => {
 	const [status, setStatus] = useState(navigator.onLine);
@@ -30,3 +30,5 @@ const useNetworkApp = () => {
 		</div>
 	);
 };
+
+export default useNetworkApp;
